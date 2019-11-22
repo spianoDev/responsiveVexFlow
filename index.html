@@ -6,6 +6,100 @@
     <link href="style.css" type="text/css">
 </head>
 <body>
+<main id="main-doc">
+    <section class="main-section" id="assumptions">
+<h2> Basic Assumptions</h2>
+        <h3>Use of the VexFlow API in this tutorial makes some assumptions about pre-requisite comfort with the
+            development of websites in general:
+        </h3>
+        <ul>
+            <li>You know how to connect to files root directories and make new files within that structure</li>
+            <li>You have a grasp of usage for common tags in HTML</li>
+            <li>You have some experience with CSS</li>
+            <li>You understand how to write JavaScript functions</li>
+            <li>You have some working knowledge of DOM manipulation</li>
+        </ul>
+    </section>
+    <section class="main-section" id="install-dependencies">
+        <h2>Install Dependencies</h2>
+        <p>First install the VexFlow library into the root directory of your project.</p>
+        <p>(Best practice is not to install globally, although that is also an option.)</p>
+        <code> $ npm install vexflow </code>
+    </section>
+
+    <section class="main-section" id="html-setup">
+        <h2>HTML Setup</h2>
+        <p>Create an index.html file that includes a standard boilerplate in the root directory of your project</p>
+        <p>Be sure to include this inside a script tag in the html or layout.hbs file or the VexFlow render will not
+            work.</p>
+        <code> &ltscript src="https://unpkg.com/vexflow/releases/vexflow-debug.js"> &lt/script></code>
+        <p> You will also need a div container for the staff you want to render</p>
+        <code>
+            &ltdiv class="music-render" id="new-song"> &lt/div>
+        </code>
+    </section>
+    <section class="main-section" id="css-setup">
+        <h2>CSS Setup</h2>
+        <p>Create a style.css file in the root directory of your project </p>
+        <p>The code below sets the staff size that will render on the page</p>
+        <code> <pre>
+.music-render {
+    margin: 10px auto;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.85);
+    width: 600px;
+    height: 150px;
+}
+            </pre>
+        </code>
+    </section>
+    <section class="main-section" id="javascript setup">
+        <h2>JavaScript Setup</h2>
+        <p>Create a music.js file in the root directory of your project </p>
+        <p>The code below will establish the requisite variables needed to create a new staff</p>
+        <code> <pre>
+let vf = new Vex.Flow.Factory({
+    renderer: {elementId: 'new-song'}
+});
+let score = vf.EasyScore();
+let system = vf.System();
+        </pre>
+        </code>
+    </section>
+    <section class="main-section" id="single-note-javascript">
+        <h2>JavaScript for Adding Single Notes</h2>
+        <p>In order to get the program to display single notes in standard notation, you have to program the precise time signature or you will get an error of 'not enough notes to render' OR 'too many backticks' meaning too many beats to render. To get around that, use a simple if/else statement to set the time signature according to the rhythm entered by the user as follows:</p>
+    <code><pre>
+function writeNote(pitch, rhythm){
+    document.getElementById('score');
+// add additional if statements to include more rhythmic options
+    if (rhythm === '/8') {
+        score.set({time: "1/8"})
+    } else if (rhythm === '/q') {
+        score.set({time: "1/4"});
+    } else if (rhythm === '/h') {
+        score.set({time: "1/2"});
+    }
+    system.addStave({
+        voices: [score.voice(score.notes(pitch + rhythm))]
+    }).addClef('treble');
+    vf.draw();
+}
+    </pre>
+    </code>
+        <p>Call this function with a input/button to add and display single notes on a staff. (Values inside the function were hardcoded for the purpose of this example.)</p>
+       <code> &ltinput class="button" type="submit" id="score" onclick="writeNote('C4', '/h')"
+               value="Make this note">
+       </code>
+    </section>
+    <section class="main-section" id="credits">
+        <h2>Credits</h2>
+        <p>Please visit the first version of my dynamic use of this library on Heroku
+            <a href="" >drawMusic v.1</a> and feel free to submit comments or improvements via an issue in the
+            <a href=""> drawMusic GitHub</a> Repo.</p>
+    </section>
+
+</main>
 
 </body>
 </html>
