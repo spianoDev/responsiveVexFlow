@@ -3,12 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <title>Dynamic VexFlow Documentation</title>
-    <link href="style.css" type="text/css">
+    <link href="style.css" type="text/css" rel="stylesheet">
 </head>
 <body>
+
+    <nav id="navbar" class="sidenav">
+<header>Responsive VexFlow Tutorial</header>
+    <a href="#basic_assumptions" class="nav-link"> Basic Assumptions</a>
+    <a href="#install_dependencies" class="nav-link">Install Dependencies</a>
+    <a href="#html_setup" class="nav-link">HTML Setup</a>
+    <a href="#css_setup" class="nav-link">CSS Setup</a>
+    <a href="#javascript_setup" class="nav-link">JavaScript Setup</a>
+    <a href="#single_note_javascript" class="nav-link">Single Note JavaScript</a>
+    <a href="#credits" class="nav-link">Credits</a>
+
+    </nav>
+
 <main id="main-doc">
-    <section class="main-section" id="assumptions">
-<h2> Basic Assumptions</h2>
+    <section class="main-section" id="basic_assumptions">
+<header> Basic Assumptions</header>
         <h3>Use of the VexFlow API in this tutorial makes some assumptions about pre-requisite comfort with the
             development of websites in general:
         </h3>
@@ -20,15 +33,15 @@
             <li>You have some working knowledge of DOM manipulation</li>
         </ul>
     </section>
-    <section class="main-section" id="install-dependencies">
-        <h2>Install Dependencies</h2>
+    <section class="main-section" id="install_dependencies">
+        <header>Install Dependencies</header>
         <p>First install the VexFlow library into the root directory of your project.</p>
         <p>(Best practice is not to install globally, although that is also an option.)</p>
         <code> $ npm install vexflow </code>
     </section>
 
-    <section class="main-section" id="html-setup">
-        <h2>HTML Setup</h2>
+    <section class="main-section" id="html_setup">
+        <header>HTML Setup</header>
         <p>Create an index.html file that includes a standard boilerplate in the root directory of your project</p>
         <p>Be sure to include this inside a script tag in the html or layout.hbs file or the VexFlow render will not
             work.</p>
@@ -38,8 +51,8 @@
             &ltdiv class="music-render" id="new-song"> &lt/div>
         </code>
     </section>
-    <section class="main-section" id="css-setup">
-        <h2>CSS Setup</h2>
+    <section class="main-section" id="css_setup">
+        <header>CSS Setup</header>
         <p>Create a style.css file in the root directory of your project </p>
         <p>The code below sets the staff size that will render on the page</p>
         <code> <pre>
@@ -53,8 +66,8 @@
             </pre>
         </code>
     </section>
-    <section class="main-section" id="javascript setup">
-        <h2>JavaScript Setup</h2>
+    <section class="main-section" id="javascript_setup">
+        <header>JavaScript Setup</header>
         <p>Create a music.js file in the root directory of your project </p>
         <p>The code below will establish the requisite variables needed to create a new staff</p>
         <code> <pre>
@@ -66,8 +79,8 @@ let system = vf.System();
         </pre>
         </code>
     </section>
-    <section class="main-section" id="single-note-javascript">
-        <h2>JavaScript for Adding Single Notes</h2>
+    <section class="main-section" id="single_note_javascript">
+        <header>Single Note JavaScript</header>
         <p>In order to get the program to display single notes in standard notation, you have to program the precise time signature or you will get an error of 'not enough notes to render' OR 'too many backticks' meaning too many beats to render. To get around that, use a simple if/else statement to set the time signature according to the rhythm entered by the user as follows:</p>
     <code><pre>
 function writeNote(pitch, rhythm){
@@ -93,7 +106,7 @@ function writeNote(pitch, rhythm){
        </code>
     </section>
     <section class="main-section" id="credits">
-        <h2>Credits</h2>
+        <header>Credits</header>
         <p>Please visit the first version of my dynamic use of this library on Heroku
             <a href="" >drawMusic v.1</a> and feel free to submit comments or improvements via an issue in the
             <a href=""> drawMusic GitHub</a> Repo.</p>
