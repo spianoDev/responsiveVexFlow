@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <title>Dynamic VexFlow Documentation</title>
     <link href="style.css" type="text/css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cousine|Nanum+Gothic+Coding&display=swap" rel="stylesheet">
+
+
 </head>
 <body>
 
@@ -35,15 +38,15 @@
     </section>
     <section class="main-section" id="install_dependencies">
         <header class="heading">Install Dependencies</header>
-        <p>First install the VexFlow library into the root directory of your project.</p>
-        <p>(Best practice is not to install globally, although that is also an option.)</p>
+        <p>First install the VexFlow library into the root directory of your project. (Best practice is not to
+            install globally, although that is also an option.)</p>
         <code> $ npm install vexflow </code>
     </section>
 
     <section class="main-section" id="html_setup">
         <header class="heading">HTML Setup</header>
-        <p>Create an index.html file that includes a standard boilerplate in the root directory of your project</p>
-        <p>Be sure to include this inside a script tag in the html or layout.hbs file or the VexFlow render will not
+        <p>Create an index.html file that includes a standard boilerplate in the root directory of your project. Be
+            sure to include this inside a script tag in the html or layout.hbs file or the VexFlow render will not
             work.</p>
         <code> &ltscript src="https://unpkg.com/vexflow/releases/vexflow-debug.js"> &lt/script></code>
         <p> You will also need a div container for the staff you want to render</p>
@@ -53,8 +56,8 @@
     </section>
     <section class="main-section" id="css_setup">
         <header class="heading">CSS Setup</header>
-        <p>Create a style.css file in the root directory of your project </p>
-        <p>The code below sets the staff size that will render on the page</p>
+        <p>Create a style.css file in the root directory of your project. The code below sets the staff size that will
+            render on the page.</p>
         <code> <pre>
 .music-render {
     margin: 10px auto;
@@ -68,8 +71,8 @@
     </section>
     <section class="main-section" id="javascript_setup">
         <header class="heading">JavaScript Setup</header>
-        <p>Create a music.js file in the root directory of your project </p>
-        <p>The code below will establish the requisite variables needed to create a new staff</p>
+        <p>Create a music.js file in the root directory of your project. The code below will establish the requisite
+            variables needed to create a new staff.</p>
         <code> <pre>
 let vf = new Vex.Flow.Factory({
     renderer: {elementId: 'new-song'}
@@ -81,7 +84,8 @@ let system = vf.System();
     </section>
     <section class="main-section" id="single_note_javascript">
         <header class="heading">Single Note JavaScript</header>
-        <p>In order to get the program to display single notes in standard notation, you have to program the precise time signature or you will get an error of 'not enough notes to render' OR 'too many backticks' meaning too many beats to render. To get around that, use a simple if/else statement to set the time signature according to the rhythm entered by the user as follows:</p>
+        <p>In order to get the program to display single notes in standard notation, you have to program the precise time signature or you will get an error of 'not enough notes to render' OR 'too many backticks' meaning too many beats to render.
+            To get around that, use a simple if/else statement to set the time signature according to the rhythm entered by the user as follows:</p>
     <code><pre>
 function writeNote(pitch, rhythm){
     document.getElementById('score');
@@ -108,8 +112,11 @@ function writeNote(pitch, rhythm){
     <section class="main-section" id="credits_and_links">
         <header class="heading">Credits & Links</header>
         <p>Please visit the first version of my dynamic use of this library on Heroku
-            <a href="" >drawMusic v.1</a> and feel free to submit comments or improvements via an issue in the
-            <a href=""> drawMusic GitHub</a> Repo.</p>
+            <a href="https://draw-music-app.herokuapp.com/" >drawMusic v.1</a> and feel free to submit comments or improvements via an issue in the
+            <a href="https://github.com/spianoDev/drawMusic"> drawMusic GitHub</a> Repo. You can also view this information at the
+            <a href="https://github.com/0xfe/vexflow/wiki/Creating-Flexible-Uses-of-VexFlow">VexFlow wiki entry</a>
+            and read more about <a href="https://github.com/0xfe/vexflow">VexFLow</a> at their GitHub Page.
+        </p>
     </section>
 
 </main>
