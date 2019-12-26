@@ -4,11 +4,15 @@ A quick start guide to setting up a dynamic use of the VexFlow API.
 ## This repo is part of a series of tutorials.
 
 ### Navigation is set to the side with the clickable links moving you down the page through the tutorial
+
 screen shot of nav bar
+
 ![Nav Example](images/VexFlow-Nav.png) 
 
 ### Code snippets are highlighted in blue for easy copy/paste
+
 code example
+
 ![Code Example](images/VexFlow-code.png) 
 
 typical presentation of code in README.md
@@ -32,6 +36,7 @@ function writeNote(pitch, rhythm){
 
 ```
 ### Links to supporting documents are in red at the bottom
+
 ![Link Example](images/VexFlow-Links.png)
 
 All tutorials are built with **HTML** and **CSS**
