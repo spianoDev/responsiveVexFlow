@@ -15,7 +15,7 @@ code example
 
 ![Code Example](images/VexFlow-code.png) 
 
-typical presentation of code in README.md
+(typical presentation of Javascript code in README.md)
 
 ```
 function writeNote(pitch, rhythm){
@@ -35,7 +35,7 @@ function writeNote(pitch, rhythm){
 }
 
 ```
-### Links to supporting documents are in red at the bottom
+### Links to supporting documents are in red in the paragraph text
 
 ![Link Example](images/VexFlow-Links.png)
 
