@@ -35,7 +35,7 @@ function writeNote(pitch, rhythm){
 }
 
 ```
-### Links to supporting documents are in red in the paragraph text
+### Links to supporting documents are red in the paragraph text
 
 ![Link Example](images/VexFlow-Links.png)
 
